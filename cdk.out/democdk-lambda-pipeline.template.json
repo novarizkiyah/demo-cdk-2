@@ -340,7 +340,7 @@
                   "ProjectName": {
                     "Ref": "PipelineBuildSynthCdkBuildProject6BEFA8E6"
                   },
-                  "EnvironmentVariables": "[{\"name\":\"_PROJECT_CONFIG_HASH\",\"type\":\"PLAINTEXT\",\"value\":\"0fd8310413061f435334f17f7d41541d6d257cd52d8ca439c7305b544367955a\"}]"
+                  "EnvironmentVariables": "[{\"name\":\"_PROJECT_CONFIG_HASH\",\"type\":\"PLAINTEXT\",\"value\":\"49c5f2d3794b6f1cbe0652f8cd47031a451dbd4749ea7a46639ae6b265707488\"}]"
                 },
                 "InputArtifacts": [
                   {
@@ -861,7 +861,7 @@
           ]
         },
         "Source": {
-          "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"build\": {\n      \"commands\": [\n        \"cd 5-cdk-pipelines/cdk/\",\n        \"npm install -g aws-cdk\",\n        \"pip install -r requirements.txt\",\n        \"cdk synth\"\n      ]\n    }\n  },\n  \"artifacts\": {\n    \"base-directory\": \"5-cdk-pipelines/cdk/cdk.out\",\n    \"files\": \"**/*\"\n  }\n}",
+          "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"build\": {\n      \"commands\": [\n        \"cd demo-cdk/5-cdk-pipelines/cdk/\",\n        \"npm install -g aws-cdk\",\n        \"pip install -r requirements.txt\",\n        \"cdk synth\"\n      ]\n    }\n  },\n  \"artifacts\": {\n    \"base-directory\": \"demo-cdk/5-cdk-pipelines/cdk/cdk.out\",\n    \"files\": \"**/*\"\n  }\n}",
           "Type": "CODEPIPELINE"
         },
         "Cache": {

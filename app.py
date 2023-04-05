@@ -38,9 +38,9 @@ class PipelineStack(Stack):
                     "main",
                     connection_arn=github_connection_arn
                 ),
-                commands=["cd demo-cdk/5-cdk-pipelines/cdk/", "npm install -g aws-cdk",
+                commands=["cd demo-cdk-2", "npm install -g aws-cdk",
                           "pip install -r requirements.txt", "cdk synth"],
-                primary_output_directory="demo-cdk/5-cdk-pipelines/cdk/cdk.out"
+                primary_output_directory="demo-cdk-2/cdk.out"
             ))
 
         pipeline.add_stage(
