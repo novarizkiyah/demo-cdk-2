@@ -281,7 +281,7 @@
                                       "Effect": "Allow",
                                       "Resource": {
                                         "Fn::GetAtt": [
-                                          "PipelineSourcenovarizkiyahdemocdkCodePipelineActionRole52AA3AA9",
+                                          "PipelineSourcenovarizkiyahdemocdk2CodePipelineActionRoleE9B21C8E",
                                           "Arn"
                                         ]
                                       }
@@ -388,10 +388,10 @@
                             "name": "Source",
                             "actions": [
                               {
-                                "name": "novarizkiyah_demo-cdk",
+                                "name": "novarizkiyah_demo-cdk-2",
                                 "outputArtifacts": [
                                   {
-                                    "name": "novarizkiyah_demo_cdk_Source"
+                                    "name": "novarizkiyah_demo_cdk_2_Source"
                                   }
                                 ],
                                 "actionTypeId": {
@@ -404,13 +404,13 @@
                                   "ConnectionArn": {
                                     "Ref": "githubconnectionarnParameter"
                                   },
-                                  "FullRepositoryId": "novarizkiyah/demo-cdk",
+                                  "FullRepositoryId": "novarizkiyah/demo-cdk-2",
                                   "BranchName": "main"
                                 },
                                 "runOrder": 1,
                                 "roleArn": {
                                   "Fn::GetAtt": [
-                                    "PipelineSourcenovarizkiyahdemocdkCodePipelineActionRole52AA3AA9",
+                                    "PipelineSourcenovarizkiyahdemocdk2CodePipelineActionRoleE9B21C8E",
                                     "Arn"
                                   ]
                                 }
@@ -424,7 +424,7 @@
                                 "name": "Synth",
                                 "inputArtifacts": [
                                   {
-                                    "name": "novarizkiyah_demo_cdk_Source"
+                                    "name": "novarizkiyah_demo_cdk_2_Source"
                                   }
                                 ],
                                 "outputArtifacts": [
@@ -647,17 +647,17 @@
                     "id": "Source",
                     "path": "democdk-lambda-pipeline/Pipeline/Pipeline/Source",
                     "children": {
-                      "novarizkiyah_demo-cdk": {
-                        "id": "novarizkiyah_demo-cdk",
-                        "path": "democdk-lambda-pipeline/Pipeline/Pipeline/Source/novarizkiyah_demo-cdk",
+                      "novarizkiyah_demo-cdk-2": {
+                        "id": "novarizkiyah_demo-cdk-2",
+                        "path": "democdk-lambda-pipeline/Pipeline/Pipeline/Source/novarizkiyah_demo-cdk-2",
                         "children": {
                           "CodePipelineActionRole": {
                             "id": "CodePipelineActionRole",
-                            "path": "democdk-lambda-pipeline/Pipeline/Pipeline/Source/novarizkiyah_demo-cdk/CodePipelineActionRole",
+                            "path": "democdk-lambda-pipeline/Pipeline/Pipeline/Source/novarizkiyah_demo-cdk-2/CodePipelineActionRole",
                             "children": {
                               "Resource": {
                                 "id": "Resource",
-                                "path": "democdk-lambda-pipeline/Pipeline/Pipeline/Source/novarizkiyah_demo-cdk/CodePipelineActionRole/Resource",
+                                "path": "democdk-lambda-pipeline/Pipeline/Pipeline/Source/novarizkiyah_demo-cdk-2/CodePipelineActionRole/Resource",
                                 "attributes": {
                                   "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                                   "aws:cdk:cloudformation:props": {
@@ -697,11 +697,11 @@
                               },
                               "DefaultPolicy": {
                                 "id": "DefaultPolicy",
-                                "path": "democdk-lambda-pipeline/Pipeline/Pipeline/Source/novarizkiyah_demo-cdk/CodePipelineActionRole/DefaultPolicy",
+                                "path": "democdk-lambda-pipeline/Pipeline/Pipeline/Source/novarizkiyah_demo-cdk-2/CodePipelineActionRole/DefaultPolicy",
                                 "children": {
                                   "Resource": {
                                     "id": "Resource",
-                                    "path": "democdk-lambda-pipeline/Pipeline/Pipeline/Source/novarizkiyah_demo-cdk/CodePipelineActionRole/DefaultPolicy/Resource",
+                                    "path": "democdk-lambda-pipeline/Pipeline/Pipeline/Source/novarizkiyah_demo-cdk-2/CodePipelineActionRole/DefaultPolicy/Resource",
                                     "attributes": {
                                       "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                                       "aws:cdk:cloudformation:props": {
@@ -775,10 +775,10 @@
                                           ],
                                           "Version": "2012-10-17"
                                         },
-                                        "policyName": "PipelineSourcenovarizkiyahdemocdkCodePipelineActionRoleDefaultPolicyF5138383",
+                                        "policyName": "PipelineSourcenovarizkiyahdemocdk2CodePipelineActionRoleDefaultPolicyD24E5FAF",
                                         "roles": [
                                           {
-                                            "Ref": "PipelineSourcenovarizkiyahdemocdkCodePipelineActionRole52AA3AA9"
+                                            "Ref": "PipelineSourcenovarizkiyahdemocdk2CodePipelineActionRoleE9B21C8E"
                                           }
                                         ]
                                       }

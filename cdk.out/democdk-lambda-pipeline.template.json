@@ -208,7 +208,7 @@
               "Effect": "Allow",
               "Resource": {
                 "Fn::GetAtt": [
-                  "PipelineSourcenovarizkiyahdemocdkCodePipelineActionRole52AA3AA9",
+                  "PipelineSourcenovarizkiyahdemocdk2CodePipelineActionRoleE9B21C8E",
                   "Arn"
                 ]
               }
@@ -307,18 +307,18 @@
                   "ConnectionArn": {
                     "Ref": "githubconnectionarnParameter"
                   },
-                  "FullRepositoryId": "novarizkiyah/demo-cdk",
+                  "FullRepositoryId": "novarizkiyah/demo-cdk-2",
                   "BranchName": "main"
                 },
-                "Name": "novarizkiyah_demo-cdk",
+                "Name": "novarizkiyah_demo-cdk-2",
                 "OutputArtifacts": [
                   {
-                    "Name": "novarizkiyah_demo_cdk_Source"
+                    "Name": "novarizkiyah_demo_cdk_2_Source"
                   }
                 ],
                 "RoleArn": {
                   "Fn::GetAtt": [
-                    "PipelineSourcenovarizkiyahdemocdkCodePipelineActionRole52AA3AA9",
+                    "PipelineSourcenovarizkiyahdemocdk2CodePipelineActionRoleE9B21C8E",
                     "Arn"
                   ]
                 },
@@ -344,7 +344,7 @@
                 },
                 "InputArtifacts": [
                   {
-                    "Name": "novarizkiyah_demo_cdk_Source"
+                    "Name": "novarizkiyah_demo_cdk_2_Source"
                   }
                 ],
                 "Name": "Synth",
@@ -555,7 +555,7 @@
         "aws:cdk:path": "democdk-lambda-pipeline/Pipeline/Pipeline/Resource"
       }
     },
-    "PipelineSourcenovarizkiyahdemocdkCodePipelineActionRole52AA3AA9": {
+    "PipelineSourcenovarizkiyahdemocdk2CodePipelineActionRoleE9B21C8E": {
       "Type": "AWS::IAM::Role",
       "Properties": {
         "AssumeRolePolicyDocument": {
@@ -587,10 +587,10 @@
         }
       },
       "Metadata": {
-        "aws:cdk:path": "democdk-lambda-pipeline/Pipeline/Pipeline/Source/novarizkiyah_demo-cdk/CodePipelineActionRole/Resource"
+        "aws:cdk:path": "democdk-lambda-pipeline/Pipeline/Pipeline/Source/novarizkiyah_demo-cdk-2/CodePipelineActionRole/Resource"
       }
     },
-    "PipelineSourcenovarizkiyahdemocdkCodePipelineActionRoleDefaultPolicyF5138383": {
+    "PipelineSourcenovarizkiyahdemocdk2CodePipelineActionRoleDefaultPolicyD24E5FAF": {
       "Type": "AWS::IAM::Policy",
       "Properties": {
         "PolicyDocument": {
@@ -663,15 +663,15 @@
           ],
           "Version": "2012-10-17"
         },
-        "PolicyName": "PipelineSourcenovarizkiyahdemocdkCodePipelineActionRoleDefaultPolicyF5138383",
+        "PolicyName": "PipelineSourcenovarizkiyahdemocdk2CodePipelineActionRoleDefaultPolicyD24E5FAF",
         "Roles": [
           {
-            "Ref": "PipelineSourcenovarizkiyahdemocdkCodePipelineActionRole52AA3AA9"
+            "Ref": "PipelineSourcenovarizkiyahdemocdk2CodePipelineActionRoleE9B21C8E"
           }
         ]
       },
       "Metadata": {
-        "aws:cdk:path": "democdk-lambda-pipeline/Pipeline/Pipeline/Source/novarizkiyah_demo-cdk/CodePipelineActionRole/DefaultPolicy/Resource"
+        "aws:cdk:path": "democdk-lambda-pipeline/Pipeline/Pipeline/Source/novarizkiyah_demo-cdk-2/CodePipelineActionRole/DefaultPolicy/Resource"
       }
     },
     "PipelineBuildSynthCdkBuildProjectRole231EEA2A": {
