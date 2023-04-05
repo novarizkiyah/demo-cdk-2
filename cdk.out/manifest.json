@@ -30,7 +30,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/b2e41bf47fca80897cee94f72230dea08a66aaee01cf7de50d8b62b369b2a6da.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/6f6803bf0e4322f31df85877f87561f2a418c881bfcf16a34aae451c0afb3b05.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -46,12 +46,6 @@
         "democdk-lambda-pipeline.assets"
       ],
       "metadata": {
-        "/democdk-lambda-pipeline/github-connection-arn.Parameter": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "githubconnectionarnParameter"
-          }
-        ],
         "/democdk-lambda-pipeline/Pipeline/Pipeline/ArtifactsBucket/Resource": [
           {
             "type": "aws:cdk:logicalId",

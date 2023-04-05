@@ -1,15 +1,4 @@
 {
-  "Parameters": {
-    "githubconnectionarnParameter": {
-      "Type": "AWS::SSM::Parameter::Value<String>",
-      "Default": "github-connection-arn"
-    },
-    "BootstrapVersion": {
-      "Type": "AWS::SSM::Parameter::Value<String>",
-      "Default": "/cdk-bootstrap/hnb659fds/version",
-      "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
-    }
-  },
   "Resources": {
     "PipelineArtifactsBucketAEA9A052": {
       "Type": "AWS::S3::Bucket",
@@ -304,9 +293,7 @@
                   "Version": "1"
                 },
                 "Configuration": {
-                  "ConnectionArn": {
-                    "Ref": "githubconnectionarnParameter"
-                  },
+                  "ConnectionArn": "arn:aws:codestar-connections:us-west-2:756600308795:connection/9f1015dd-5769-4c4c-bd27-0e9357da2443",
                   "FullRepositoryId": "novarizkiyah/demo-cdk-2",
                   "BranchName": "main"
                 },
@@ -598,9 +585,7 @@
             {
               "Action": "codestar-connections:UseConnection",
               "Effect": "Allow",
-              "Resource": {
-                "Ref": "githubconnectionarnParameter"
-              }
+              "Resource": "arn:aws:codestar-connections:us-west-2:756600308795:connection/9f1015dd-5769-4c4c-bd27-0e9357da2443"
             },
             {
               "Action": [
@@ -1509,7 +1494,7 @@
     "CDKMetadata": {
       "Type": "AWS::CDK::Metadata",
       "Properties": {
-        "Analytics": "v2:deflate64:H4sIAAAAAAAA/0VPWw6DMAw7y/5LBuNj/+MCFTvAVEqmBUqL2qIJVb37eJQhRbLjJLZyg+IO+UV8XSbbPlPUQHh6IXtWvTUXVgzo0bIanZmsRDbSiIo0OqhMizx1bLl/BbkoxxzCf7YaJR6ZKyE8JtmjX/XEduBGkZxPee8jIzFAqI3anDY8N4+dNbqZSLVnLremQ7nFJBrj5nC8svDK6JY8GR0Zn/3H6GsJRb7UpXNEmZ20pwGh3vEHmATO4iwBAAA="
+        "Analytics": "v2:deflate64:H4sIAAAAAAAA/01NWwqDMBA8i/9xq/Wj//UCYg9QNEnpasyKSSgScveq0VpYmMcOM1fIb5AlzcekXPSpwhb8wza8ZyOOUqGWBkoSstoVW5JPzxfn+IP//cqXPnhgpgB/d7yXdvV3FqEihXw+7agDw2YAX5PamjY8k0dmnW4dKnHuVhN1km8zOw2B1dKQm3is+uMlaYEWSQdWzfZN+lJAni2XdAYxnZy2OEioI34BqMZkdh8BAAA="
       },
       "Metadata": {
         "aws:cdk:path": "democdk-lambda-pipeline/CDKMetadata/Default"
@@ -1709,6 +1694,13 @@
           ]
         }
       ]
+    }
+  },
+  "Parameters": {
+    "BootstrapVersion": {
+      "Type": "AWS::SSM::Parameter::Value<String>",
+      "Default": "/cdk-bootstrap/hnb659fds/version",
+      "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
     }
   },
   "Rules": {

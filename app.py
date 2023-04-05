@@ -26,9 +26,8 @@ class PipelineStack(Stack):
     def __init__(self, scope, id, env=None):
         super().__init__(scope, id, env=env)
 
-        github_connection_arn = "arn:aws:codestar-connections:us-west-2:756600308795:connection/9f1015dd-5769-4c4c-bd27-0e9357da2443"
-        # _ssm.StringParameter.from_string_parameter_name(
-        #     self, "github-connection-arn", string_parameter_name="github-connection-arn").string_value
+        github_connection_arn = _ssm.StringParameter.from_string_parameter_name(
+            self, "github-connection-arn", string_parameter_name="github-connection-arn").string_value
         pipeline = pipelines.CodePipeline(
             self,
             "Pipeline",

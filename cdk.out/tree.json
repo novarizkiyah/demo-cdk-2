@@ -16,22 +16,6 @@
         "id": "democdk-lambda-pipeline",
         "path": "democdk-lambda-pipeline",
         "children": {
-          "github-connection-arn.Parameter": {
-            "id": "github-connection-arn.Parameter",
-            "path": "democdk-lambda-pipeline/github-connection-arn.Parameter",
-            "constructInfo": {
-              "fqn": "aws-cdk-lib.CfnParameter",
-              "version": "2.17.0"
-            }
-          },
-          "github-connection-arn": {
-            "id": "github-connection-arn",
-            "path": "democdk-lambda-pipeline/github-connection-arn",
-            "constructInfo": {
-              "fqn": "aws-cdk-lib.Resource",
-              "version": "2.17.0"
-            }
-          },
           "Pipeline": {
             "id": "Pipeline",
             "path": "democdk-lambda-pipeline/Pipeline",
@@ -401,9 +385,7 @@
                                   "provider": "CodeStarSourceConnection"
                                 },
                                 "configuration": {
-                                  "ConnectionArn": {
-                                    "Ref": "githubconnectionarnParameter"
-                                  },
+                                  "ConnectionArn": "arn:aws:codestar-connections:us-west-2:756600308795:connection/9f1015dd-5769-4c4c-bd27-0e9357da2443",
                                   "FullRepositoryId": "novarizkiyah/demo-cdk-2",
                                   "BranchName": "main"
                                 },
@@ -710,9 +692,7 @@
                                             {
                                               "Action": "codestar-connections:UseConnection",
                                               "Effect": "Allow",
-                                              "Resource": {
-                                                "Ref": "githubconnectionarnParameter"
-                                              }
+                                              "Resource": "arn:aws:codestar-connections:us-west-2:756600308795:connection/9f1015dd-5769-4c4c-bd27-0e9357da2443"
                                             },
                                             {
                                               "Action": [
