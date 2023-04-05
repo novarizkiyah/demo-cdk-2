@@ -34,7 +34,7 @@ class PipelineStack(Stack):
             synth=pipelines.ShellStep(
                 "Synth",
                 input=pipelines.CodePipelineSource.connection(
-                    "novarizkiyah/demo-cdk",
+                    "novarizkiyah/demo-cdk-2",
                     "main",
                     connection_arn=github_connection_arn
                 ),
